@@ -12,7 +12,7 @@
     "types": [],
     // For nodejs:
     "lib": ["esnext" , "DOM"],
-    "outDir" : "./dist",
+    "outDir" : "./dist/assets/js/",
     // "types": ["node"],
     // and npm install -D @types/node
 
@@ -43,6 +43,6 @@
     "skipLibCheck": true,
   },
   "include" : [
-    "./src",
+    "modulo1/src/",
   ]
 }
