@@ -7,8 +7,8 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
+    "target": "es2019",
     "module": "nodenext",
-    "target": "esnext",
     "types": [],
     // For nodejs:
     "lib": ["esnext" , "DOM"],
@@ -17,13 +17,19 @@
     // and npm install -D @types/node
 
     // Other Outputs
-    "sourceMap": true,
+    "sourceMap": false,
     "declaration": true,
     "declarationMap": true,
+    "removeComments": true,
+    //"noEmit": true,
+    "noEmitOnError": true,
+
 
     // Stricter Typechecking Options
+    "strict": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "noImplicitAny": true,    
 
     // Style Options
     // "noImplicitReturns": true,
@@ -34,15 +40,19 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
-    "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+
+    /* Experimental Options */
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
   },
   "include" : [
     "modulo1/src/",
+    "modulo2/src/"
   ]
 }

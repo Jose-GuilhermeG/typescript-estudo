@@ -8,7 +8,7 @@ class Colaborador{
 }
 
 //forma completa
-export class Empresa{
+class Empresa{
     public readonly nome : string; // public é o valor padrão então podia ser : readonly nome : string
     private readonly colaboradores : Array<Colaborador> = [] ; // se eu quiser deixar o array imutavel basta dar um readlony no type
     protected readonly cnpj : string
