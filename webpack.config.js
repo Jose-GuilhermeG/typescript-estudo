@@ -2,7 +2,10 @@
 
  module.exports = {
    mode : 'development',
-   entry: './modulo1/src/index.ts',
+   entry: {
+    modulo1 : './modulo1/src/index.ts' ,
+    modulo2 : './modulo2/src/index.ts'
+   },
    devtool: 'inline-source-map',
    module: {
      rules: [
@@ -17,8 +20,7 @@
      extensions: [ '.tsx', '.ts', '.js' ],
    },
    output: {
-     filename: 'bundle.js',
+     filename: '[name].bundle.js',
      path: path.resolve(__dirname, 'dist' , 'assets' , 'js'),
    },
-   devtool : 'source-map',
  };
