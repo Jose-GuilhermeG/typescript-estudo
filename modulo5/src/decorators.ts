@@ -1,5 +1,5 @@
 @decorator
-class Animal{
+export class Animal{
     constructor(
         public cor : string
     ){}
