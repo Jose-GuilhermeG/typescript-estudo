@@ -1,15 +1,15 @@
-export interface CartItem{
+export interface CartItemLegacy{
     name : string ;
     price : number;
 } 
 
-export type OrderStatus = 'open' | 'closed'
+export type OrderStatusLegacy = 'open' | 'closed'
 
-export class ShoppingCart {
-    private readonly _items:  Array<CartItem> = [];
-    private _orderStatus : OrderStatus = 'open';
+export class ShoppingCartLegacy {
+    private readonly _items:  Array<CartItemLegacy> = [];
+    private _orderStatus : OrderStatusLegacy = 'open';
 
-    public addItem(item : CartItem) : void{
+    public addItem(item : CartItemLegacy) : void{
         this._items.push(item);
     }
 
@@ -17,11 +17,11 @@ export class ShoppingCart {
         this._items.splice(index , 1);
     }
 
-    public get items() : Readonly<Array<CartItem>>{
+    public get items() : Readonly<Array<CartItemLegacy>>{
         return this._items
     }
 
-    public get orderStatus() : OrderStatus {
+    public get orderStatus() : OrderStatusLegacy {
         return this._orderStatus
     }
 
@@ -59,7 +59,7 @@ export class ShoppingCart {
 
 }
 
-const shoppingCart = new ShoppingCart();
+const shoppingCart = new ShoppingCartLegacy();
 
 shoppingCart.addItem({
     name : 'Camisa' , price : 49.9
