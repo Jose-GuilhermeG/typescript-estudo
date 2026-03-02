@@ -4,11 +4,13 @@ import { Messaging } from "./interfaces/messaging";
 import { Persistency } from "./interfaces/persistency";
 import { Product } from "./classes/product";
 import { FiftyPercentDiscount } from "./classes/Discount";
+import { IndividualCustomer } from "./classes/cutomers";
 
 const shoppingCart = new ShoppingCart(new FiftyPercentDiscount());
 const messaging = new Messaging()
 const persistency = new Persistency()
-const order = new Order(shoppingCart , messaging , persistency);
+const individualCustomer = new IndividualCustomer("Luiz","otavio",'000.000.000-00')
+const order = new Order(shoppingCart , messaging , persistency , individualCustomer);
 
 shoppingCart.addItem(
     new Product('Camisa' , 49.9)
